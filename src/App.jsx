@@ -14,14 +14,19 @@ function App() {
 
 
   function handleSubmit(userName){
-    setName(userName)
-    setHasSubmitted(true)
+    setName(userName);
+    setHasSubmitted(true);
 
 }
+  function handleBack(s){
+    setHasSubmitted(false);
+    setName("");
+
+  }
   return(
     <>
       {!hasSubmitted && <HomeScreen onSubmitHandle = {handleSubmit} />}
-      {hasSubmitted && <WelcomeScreen name ={name} />}
+      {hasSubmitted && <WelcomeScreen name ={name} handleBackButton={handleBack}/>}
     </>
   )
 }
