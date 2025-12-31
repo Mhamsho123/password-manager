@@ -5,8 +5,6 @@ import WelcomeScreen from "./welcomescreen"
 export default function HomeScreen({onSubmitHandle}){
 
 
-    const [name, setName] = React.useState("")
-
 
     function personName(formData){
         const userName = formData.get("inputName")
