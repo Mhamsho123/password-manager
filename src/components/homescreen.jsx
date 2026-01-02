@@ -1,8 +1,8 @@
 import React from "react"
-import WelcomeScreen from "./welcomescreen"
 
 
-export default function HomeScreen({onSubmitHandle}){
+
+export default function HomeScreen({onSubmitHandle, error }){
 
 
 
@@ -23,7 +23,8 @@ export default function HomeScreen({onSubmitHandle}){
                 <div className="nameRow">
                     <label htmlFor="inputName">What is your name?</label>
                     <input id="inputName" name="inputName" type="text" placeholder="John Doe" />
-                    </div>
+                    {error && <p>{error}</p>}
+                </div>
                     <button className="submitButton"type="submit">Submit</button>
             </form>
             </div>

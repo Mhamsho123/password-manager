@@ -11,16 +11,24 @@ function App() {
 
   const [name, setName] = React.useState("");
   const [hasSubmitted, setHasSubmitted] = React.useState(false);
+  const [error, setError] = React.useState("");
 
 
   function handleSubmit(userName){
+
+    if(!userName || userName.trim() === ""){
+      setError("Error: No name inserted!")
+      return
+    }
     setName(userName);
     setHasSubmitted(true);
+    setError("")
 
 }
   function handleBack(s){
     setHasSubmitted(false);
     setName("");
+    setError("")
 
   }
   return(
