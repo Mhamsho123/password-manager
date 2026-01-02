@@ -33,7 +33,7 @@ function App() {
   }
   return(
     <>
-      {!hasSubmitted && <HomeScreen onSubmitHandle = {handleSubmit} />}
+      {!hasSubmitted && <HomeScreen onSubmitHandle = {handleSubmit} error={error} />}
       {hasSubmitted && <WelcomeScreen name ={name} handleBackButton={handleBack}/>}
     </>
   )
